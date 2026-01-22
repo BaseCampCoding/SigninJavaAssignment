@@ -40,6 +40,10 @@ public class Main {
         case "sign":
           System.out.print("> ");
           String user = scanner.next();
+          if (!students.containsKey(user)) {
+            System.out.println("User does not exist.");
+            break;
+          }
           students.put(user, true);
           break;
         case "q":
